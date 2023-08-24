@@ -27,7 +27,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 @SuppressWarnings("serial")
-public class Busqueda extends JFrame {
+public class Search extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtBuscar;
@@ -46,7 +46,7 @@ public class Busqueda extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Busqueda frame = new Busqueda();
+					Search frame = new Search();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,8 +58,8 @@ public class Busqueda extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Busqueda() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Busqueda.class.getResource("/com/AluraHotel/images/lupa2.png")));
+	public Search() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Search.class.getResource("/com/AluraHotel/images/lupa2.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
 		contentPane = new JPanel();
@@ -102,7 +102,7 @@ public class Busqueda extends JFrame {
 		modelo.addColumn("Valor");
 		modelo.addColumn("Forma de Pago");
 		JScrollPane scroll_table = new JScrollPane(tbReservas);
-		panel.addTab("Reservas", new ImageIcon(Busqueda.class.getResource("/com/AluraHotel/images/reservado.png")), scroll_table, null);
+		panel.addTab("Reservas", new ImageIcon(Search.class.getResource("/com/AluraHotel/images/reservado.png")), scroll_table, null);
 		scroll_table.setVisible(true);
 		
 		
@@ -118,11 +118,11 @@ public class Busqueda extends JFrame {
 		modeloHuesped.addColumn("Telefono");
 		modeloHuesped.addColumn("Número de Reserva");
 		JScrollPane scroll_tableHuespedes = new JScrollPane(tbHuespedes);
-		panel.addTab("Huéspedes", new ImageIcon(Busqueda.class.getResource("/com/AluraHotel/images/pessoas.png")), scroll_tableHuespedes, null);
+		panel.addTab("Huéspedes", new ImageIcon(Search.class.getResource("/com/AluraHotel/images/pessoas.png")), scroll_tableHuespedes, null);
 		scroll_tableHuespedes.setVisible(true);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(Busqueda.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+		lblNewLabel_2.setIcon(new ImageIcon(Search.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
 		lblNewLabel_2.setBounds(56, 51, 104, 107);
 		contentPane.add(lblNewLabel_2);
 		
@@ -149,7 +149,7 @@ public class Busqueda extends JFrame {
 		btnAtras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MenuUsuario usuario = new MenuUsuario();
+				UserMenu usuario = new UserMenu();
 				usuario.setVisible(true);
 				dispose();				
 			}
@@ -179,7 +179,7 @@ public class Busqueda extends JFrame {
 		btnexit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MenuUsuario usuario = new MenuUsuario();
+				UserMenu usuario = new UserMenu();
 				usuario.setVisible(true);
 				dispose();
 			}

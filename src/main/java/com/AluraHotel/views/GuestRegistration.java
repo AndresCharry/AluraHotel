@@ -26,7 +26,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JSeparator;
 
 @SuppressWarnings("serial")
-public class RegistroHuesped extends JFrame {
+public class GuestRegistration extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNombre;
@@ -46,7 +46,7 @@ public class RegistroHuesped extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					RegistroHuesped frame = new RegistroHuesped();
+					GuestRegistration frame = new GuestRegistration();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,9 +58,9 @@ public class RegistroHuesped extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public RegistroHuesped() {
+	public GuestRegistration() {
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(RegistroHuesped.class.getResource("/com/AluraHotel/images/lOGO-50PX.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(GuestRegistration.class.getResource("/com/AluraHotel/images/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 634);
 		contentPane = new JPanel();
@@ -96,7 +96,7 @@ public class RegistroHuesped extends JFrame {
 		btnAtras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ReservasView reservas = new ReservasView();
+				ReservationView reservas = new ReservationView();
 				reservas.setVisible(true);
 				dispose();				
 			}
@@ -142,7 +142,7 @@ public class RegistroHuesped extends JFrame {
 		
 		txtFechaN = new JDateChooser();
 		txtFechaN.setBounds(560, 278, 285, 36);
-		txtFechaN.getCalendarButton().setIcon(new ImageIcon(RegistroHuesped.class.getResource("/com/AluraHotel/images/icon-reservas.png")));
+		txtFechaN.getCalendarButton().setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/icon-reservas.png")));
 		txtFechaN.getCalendarButton().setBackground(SystemColor.textHighlight);
 		txtFechaN.setDateFormatString("yyyy-MM-dd");
 		contentPane.add(txtFechaN);
@@ -276,12 +276,12 @@ public class RegistroHuesped extends JFrame {
 		JLabel imagenFondo = new JLabel("");
 		imagenFondo.setBounds(0, 121, 479, 502);
 		panel.add(imagenFondo);
-		imagenFondo.setIcon(new ImageIcon(RegistroHuesped.class.getResource("/com/AluraHotel/images/registro.png")));
+		imagenFondo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/registro.png")));
 		
 		JLabel logo = new JLabel("");
 		logo.setBounds(194, 39, 104, 107);
 		panel.add(logo);
-		logo.setIcon(new ImageIcon(RegistroHuesped.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
 		
 		JPanel btnexit = new JPanel();
 		btnexit.setBounds(857, 0, 53, 36);
@@ -289,7 +289,7 @@ public class RegistroHuesped extends JFrame {
 		btnexit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MenuPrincipal principal = new MenuPrincipal();
+				MainMenu principal = new MainMenu();
 				principal.setVisible(true);
 				dispose();
 			}

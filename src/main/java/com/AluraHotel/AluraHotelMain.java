@@ -2,7 +2,7 @@ package com.AluraHotel;
 
 import java.awt.EventQueue;
 
-import com.AluraHotel.views.MenuPrincipal;
+import com.AluraHotel.views.MainMenu;
 
 public class AluraHotelMain {
 
@@ -10,7 +10,7 @@ public class AluraHotelMain {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MenuPrincipal frame = new MenuPrincipal();
+					MainMenu frame = new MainMenu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

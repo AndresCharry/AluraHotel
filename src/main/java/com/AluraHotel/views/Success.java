@@ -17,7 +17,7 @@ import java.awt.SystemColor;
 import java.awt.Toolkit;
 
 @SuppressWarnings("serial")
-public class Exito extends JDialog {
+public class Success extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -26,7 +26,7 @@ public class Exito extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			Exito dialog = new Exito();
+			Success dialog = new Success();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -37,8 +37,8 @@ public class Exito extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Exito() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Exito.class.getResource("/com/AluraHotel/images/aH-40px.png")));
+	public Success() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Success.class.getResource("/com/AluraHotel/images/aH-40px.png")));
 		setBounds(100, 100, 394, 226);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.control);
@@ -48,7 +48,7 @@ public class Exito extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JLabel lblNewLabel = new JLabel("");
-			lblNewLabel.setIcon(new ImageIcon(Exito.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+			lblNewLabel.setIcon(new ImageIcon(Success.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
 			lblNewLabel.setBounds(123, 11, 100, 100);
 			contentPanel.add(lblNewLabel);
 		}
@@ -68,7 +68,7 @@ public class Exito extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						dispose();//sirve para cerrar la ventana actual
-						MenuUsuario usuario = new MenuUsuario(); 
+						UserMenu usuario = new UserMenu(); 
 						usuario.setVisible(true);
 					}
 				});
