@@ -1,8 +1,8 @@
-package com.AluraHotel;
+package com.AluraHotel.jdbc;
 
 import java.awt.EventQueue;
 
-import com.AluraHotel.views.MainMenu;
+import com.AluraHotel.jdbc.views.MainMenu;
 
 public class AluraHotelMain {
 

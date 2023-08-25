@@ -1,4 +1,4 @@
-package com.AluraHotel.views;
+package com.AluraHotel.jdbc.views;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
