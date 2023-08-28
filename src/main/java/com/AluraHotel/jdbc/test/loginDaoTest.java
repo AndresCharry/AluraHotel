@@ -11,7 +11,7 @@ public class loginDaoTest {
 		ConnectionFactory factory = new  ConnectionFactory();
 		LoginDao login = new LoginDao(factory.reconnection());
 		
-		List<User> users = login.ConfirmUser("admin1", "admin");
+		List<User> users = login.ConfirmUser("admin", "admin");
 		users.forEach(user -> {
 		System.out.println("the user is: " + user.getUsername());
 		System.out.println("the password is: " + user.getPassword());

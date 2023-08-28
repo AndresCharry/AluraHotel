@@ -20,7 +20,6 @@ public class LoginDao {
 	
 	public List<User> ConfirmUser(String userName, String password) {
 		List<User> resultado = new ArrayList<>();
-		
 		try {
 			final PreparedStatement statement = con.prepareStatement("SELECT user, password "
 					+ "FROM Users "
@@ -32,6 +31,7 @@ public class LoginDao {
 				statement.execute();
 				
 				ResultSet resultSet = statement.getResultSet();
+//				System.out.println(resultSet.getString("user"));
 				while(resultSet.next()) {
 					User user = new User(
 							resultSet.getString("user"),
