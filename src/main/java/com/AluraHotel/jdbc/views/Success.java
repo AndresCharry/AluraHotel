@@ -38,7 +38,7 @@ public class Success extends JDialog {
 	 * Create the dialog.
 	 */
 	public Success() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Success.class.getResource("/com/AluraHotel/images/aH-40px.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Success.class.getResource("/com/AluraHotel/jdbc/images/aH-40px.png")));
 		setBounds(100, 100, 394, 226);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.control);
@@ -48,7 +48,7 @@ public class Success extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JLabel lblNewLabel = new JLabel("");
-			lblNewLabel.setIcon(new ImageIcon(Success.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+			lblNewLabel.setIcon(new ImageIcon(Success.class.getResource("/com/AluraHotel/jdbc/images/Ha-100px.png")));
 			lblNewLabel.setBounds(123, 11, 100, 100);
 			contentPanel.add(lblNewLabel);
 		}

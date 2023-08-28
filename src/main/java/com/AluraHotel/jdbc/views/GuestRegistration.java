@@ -60,7 +60,7 @@ public class GuestRegistration extends JFrame {
 	 */
 	public GuestRegistration() {
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(GuestRegistration.class.getResource("/com/AluraHotel/images/lOGO-50PX.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(GuestRegistration.class.getResource("/com/AluraHotel/jdbc/images/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 634);
 		contentPane = new JPanel();
@@ -142,7 +142,7 @@ public class GuestRegistration extends JFrame {
 		
 		txtFechaN = new JDateChooser();
 		txtFechaN.setBounds(560, 278, 285, 36);
-		txtFechaN.getCalendarButton().setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/icon-reservas.png")));
+		txtFechaN.getCalendarButton().setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/jdbc/images/icon-reservas.png")));
 		txtFechaN.getCalendarButton().setBackground(SystemColor.textHighlight);
 		txtFechaN.setDateFormatString("yyyy-MM-dd");
 		contentPane.add(txtFechaN);
@@ -276,12 +276,12 @@ public class GuestRegistration extends JFrame {
 		JLabel imagenFondo = new JLabel("");
 		imagenFondo.setBounds(0, 121, 479, 502);
 		panel.add(imagenFondo);
-		imagenFondo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/registro.png")));
+		imagenFondo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/jdbc/images/registro.png")));
 		
 		JLabel logo = new JLabel("");
 		logo.setBounds(194, 39, 104, 107);
 		panel.add(logo);
-		logo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(GuestRegistration.class.getResource("/com/AluraHotel/jdbc/images/Ha-100px.png")));
 		
 		JPanel btnexit = new JPanel();
 		btnexit.setBounds(857, 0, 53, 36);

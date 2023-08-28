@@ -59,7 +59,7 @@ public class ReservationView extends JFrame {
 	 */
 	public ReservationView() {
 		super("Reserva");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservationView.class.getResource("/com/AluraHotel/images/aH-40px.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservationView.class.getResource("/com/AluraHotel/jdbc/images/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
 		setResizable(false);
@@ -134,13 +134,13 @@ public class ReservationView extends JFrame {
 		JLabel logo = new JLabel("");
 		logo.setBounds(197, 68, 104, 107);
 		panel_1.add(logo);
-		logo.setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/jdbc/images/Ha-100px.png")));
 		
 		JLabel imagenFondo = new JLabel("");
 		imagenFondo.setBounds(0, 140, 500, 409);
 		panel_1.add(imagenFondo);
 		imagenFondo.setBackground(Color.WHITE);
-		imagenFondo.setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/images/reservas-img-3.png")));
+		imagenFondo.setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/jdbc/images/reservas-img-3.png")));
 		
 		JLabel lblValor = new JLabel("VALOR DE LA RESERVA");
 		lblValor.setForeground(SystemColor.textInactiveText);
@@ -245,7 +245,7 @@ public class ReservationView extends JFrame {
 		//Campos que guardaremos en la base de datos
 		txtFechaEntrada = new JDateChooser();
 		txtFechaEntrada.getCalendarButton().setBackground(SystemColor.textHighlight);
-		txtFechaEntrada.getCalendarButton().setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/images/icon-reservas.png")));
+		txtFechaEntrada.getCalendarButton().setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/jdbc/images/icon-reservas.png")));
 		txtFechaEntrada.getCalendarButton().setFont(new Font("Roboto", Font.PLAIN, 12));
 		txtFechaEntrada.setBounds(68, 161, 289, 35);
 		txtFechaEntrada.getCalendarButton().setBounds(268, 0, 21, 33);
@@ -256,7 +256,7 @@ public class ReservationView extends JFrame {
 		panel.add(txtFechaEntrada);
 
 		txtFechaSalida = new JDateChooser();
-		txtFechaSalida.getCalendarButton().setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/images/icon-reservas.png")));
+		txtFechaSalida.getCalendarButton().setIcon(new ImageIcon(ReservationView.class.getResource("/com/AluraHotel/jdbc/images/icon-reservas.png")));
 		txtFechaSalida.getCalendarButton().setFont(new Font("Roboto", Font.PLAIN, 11));
 		txtFechaSalida.setBounds(68, 246, 289, 35);
 		txtFechaSalida.getCalendarButton().setBounds(267, 1, 21, 31);

@@ -59,7 +59,7 @@ public class Search extends JFrame {
 	 * Create the frame.
 	 */
 	public Search() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Search.class.getResource("/com/AluraHotel/images/lupa2.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Search.class.getResource("/com/AluraHotel/jdbc/images/lupa2.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
 		contentPane = new JPanel();
@@ -102,7 +102,7 @@ public class Search extends JFrame {
 		modelo.addColumn("Valor");
 		modelo.addColumn("Forma de Pago");
 		JScrollPane scroll_table = new JScrollPane(tbReservas);
-		panel.addTab("Reservas", new ImageIcon(Search.class.getResource("/com/AluraHotel/images/reservado.png")), scroll_table, null);
+		panel.addTab("Reservas", new ImageIcon(Search.class.getResource("/com/AluraHotel/jdbc/images/reservado.png")), scroll_table, null);
 		scroll_table.setVisible(true);
 		
 		
@@ -118,11 +118,11 @@ public class Search extends JFrame {
 		modeloHuesped.addColumn("Telefono");
 		modeloHuesped.addColumn("Número de Reserva");
 		JScrollPane scroll_tableHuespedes = new JScrollPane(tbHuespedes);
-		panel.addTab("Huéspedes", new ImageIcon(Search.class.getResource("/com/AluraHotel/images/pessoas.png")), scroll_tableHuespedes, null);
+		panel.addTab("Huéspedes", new ImageIcon(Search.class.getResource("/com/AluraHotel/jdbc/images/pessoas.png")), scroll_tableHuespedes, null);
 		scroll_tableHuespedes.setVisible(true);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(Search.class.getResource("/com/AluraHotel/images/Ha-100px.png")));
+		lblNewLabel_2.setIcon(new ImageIcon(Search.class.getResource("/com/AluraHotel/jdbc/images/Ha-100px.png")));
 		lblNewLabel_2.setBounds(56, 51, 104, 107);
 		contentPane.add(lblNewLabel_2);
 		

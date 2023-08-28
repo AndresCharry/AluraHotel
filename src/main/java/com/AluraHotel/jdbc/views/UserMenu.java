@@ -49,7 +49,7 @@ public class UserMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public UserMenu() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(UserMenu.class.getResource("/com/AluraHotel/images/aH-40px.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(UserMenu.class.getResource("/com/AluraHotel/jdbc/images/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 944, 609);
 		contentPane = new JPanel();
@@ -84,7 +84,7 @@ public class UserMenu extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(50, 58, 150, 150);
 		panelMenu.add(lblNewLabel_2);
-		lblNewLabel_2.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/images/aH-150px.png")));
+		lblNewLabel_2.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/jdbc/images/aH-150px.png")));
 		
 		JPanel btnRegistro = new JPanel();
 		btnRegistro.addMouseListener(new MouseAdapter() {
@@ -109,7 +109,7 @@ public class UserMenu extends JFrame {
 		btnRegistro.setLayout(null);
 		
 		labelRegistro = new JLabel("Registro de reservas");
-		labelRegistro.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/images/reservado.png")));
+		labelRegistro.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/jdbc/images/reservado.png")));
 		labelRegistro.setForeground(SystemColor.text);
 		labelRegistro.setBounds(25, 11, 205, 34);
 		labelRegistro.setFont(new Font("Roboto", Font.PLAIN, 18));
@@ -139,7 +139,7 @@ public class UserMenu extends JFrame {
 		btnBusqueda.setLayout(null);
 		
 		JLabel lblBusquedaDeReservas = new JLabel("Búsqueda");
-		lblBusquedaDeReservas.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/images/pessoas.png")));
+		lblBusquedaDeReservas.setIcon(new ImageIcon(UserMenu.class.getResource("/com/AluraHotel/jdbc/images/pessoas.png")));
 		lblBusquedaDeReservas.setBounds(27, 11, 200, 34);
 		lblBusquedaDeReservas.setHorizontalAlignment(SwingConstants.LEFT);
 		lblBusquedaDeReservas.setForeground(Color.WHITE);

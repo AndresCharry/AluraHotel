@@ -4,6 +4,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.AluraHotel.jdbc.controller.LoginController;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -76,7 +79,7 @@ public class Login extends JFrame {
 		JLabel imgHotel = new JLabel("");
 		imgHotel.setBounds(0, 0, 304, 538);
 		panel_1.add(imgHotel);
-		imgHotel.setIcon(new ImageIcon(Login.class.getResource("/com/AluraHotel/images/img-hotel-login-.png")));
+		imgHotel.setIcon(new ImageIcon(Login.class.getResource("/com/AluraHotel/jdbc/images/img-hotel-login-.png")));
 		
 		JPanel btnexit = new JPanel();
 		btnexit.setBounds(251, 0, 53, 36);
@@ -192,7 +195,7 @@ public class Login extends JFrame {
 			}
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Login();
+				login();
 			}
 		});
 		btnLogin.setBackground(SystemColor.textHighlight);
@@ -210,7 +213,7 @@ public class Login extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/com/AluraHotel/images/lOGO-50PX.png")));
+		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/com/AluraHotel/jdbc/images/lOGO-50PX.png")));
 		lblNewLabel_1.setBounds(65, 65, 48, 59);
 		panel.add(lblNewLabel_1);
 		
@@ -234,19 +237,32 @@ public class Login extends JFrame {
 		header.setLayout(null);
 	}
 	
-	private void Login() {
-		 String Usuario= "admin";
-	     String Contraseña="admin";
-
-	        String contrase=new String (txtContrasena.getPassword());
-
-	        if(txtUsuario.getText().equals(Usuario) && contrase.equals(Contraseña)){
-	            UserMenu menu = new UserMenu();
-	            menu.setVisible(true);
-	            dispose();	 
-	        }else {
-	            JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
-	        }
+	private void login() {
+		
+		var user = new LoginController();
+		String userName = txtUsuario.getText();
+		String password = new String (txtContrasena.getPassword());
+		boolean isUserExist = user.confirmUser(userName, password);
+		
+		if(isUserExist) {
+			UserMenu menu = new UserMenu();
+            menu.setVisible(true);
+            dispose();	
+		}else {
+			JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
+		}
+//		 String Usuario= "admin";
+//	     String Contraseña="admin";
+//
+//	        String contrase=new String (txtContrasena.getPassword());
+//
+//	        if(txtUsuario.getText().equals(Usuario) && contrase.equals(Contraseña)){
+//	            UserMenu menu = new UserMenu();
+//	            menu.setVisible(true);
+//	            dispose();	 
+//	        }else {
+//	            JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
+//	        }
 	} 
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
